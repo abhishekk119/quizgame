@@ -93,6 +93,10 @@ document.getElementById("start-game-button").addEventListener("click", () => {
   quiz.init();
 });
 
+document.getElementById("next-btn").addEventListener("click", () => {
+  this.nextQuestion();
+});
+
 // Quiz game object
 const quiz = {
   questionNumber: 1,
@@ -102,11 +106,6 @@ const quiz = {
 
   init: function () {
     this.displayQuestion();
-
-    // Set up event listeners
-    document.getElementById("next-btn").addEventListener("click", () => {
-      this.nextQuestion();
-    });
   },
 
   displayQuestion: function () {

@@ -94,7 +94,7 @@ document.getElementById("start-game-button").addEventListener("click", () => {
 });
 
 document.getElementById("next-btn").addEventListener("click", () => {
-  this.nextQuestion();
+  quiz.nextQuestion();
 });
 
 // Quiz game object

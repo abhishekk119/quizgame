@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.start-game {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-game h1 {
+  color: blue;
+  text-shadow: 2px 2px 4px rgb(243, 255, 12);
+}
+
+.start-game-button {
+  height: 80px;
+  width: 160px;
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 12px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+}
+
+.start-game-button:hover {
+  background-color: green;
+}
+
+#quiz-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgb(74, 19, 238);
+  font-size: 25px;
+}
+.options {
+  margin-bottom: 15px;
+}
+.option {
+  display: block;
+  margin: 5px 0;
+  padding: 8px;
+  background: green;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+.option:hover {
+  background: blue;
+}
+.feedback {
+  padding-bottom: 20px;
+}
+.selected {
+  background: blue;
+}
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#next-btn {
+  padding: 8px 15px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#next-btn:disabled {
+  background: #cccccc;
+}

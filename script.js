@@ -192,18 +192,21 @@ const quiz = {
     document.getElementById("next-btn").style.display = "none";
 
     const resultElement = document.getElementById("result");
-    resultElement.textContent = `You scored ${this.score} out of ${quizQuestions.length}!`;
-    resultElement.style.color = "green";
-    resultElement.style.fontSize = "32px";
+    const scoreText = document.createElement("span");
+    scoreText.textContent = `You scored ${this.score} out of ${quizQuestions.length}!`;
+    scoreText.style.color = "green";
+    scoreText.style.fontSize = "32px";
+    scoreText.classList.add("animate-cls");
+    resultElement.appendChild(scoreText);
 
     if (this.score > 12) {
-      resultElement.textContent += " Excellent Score!!😇";
+      scoreText.textContent += " Excellent Score!!😇";
     } else if (this.score > 10) {
-      resultElement.textContent += " Good Game!!😊";
+      scoreText.textContent += " Good Game!!😊";
     } else if (this.score > 8) {
-      resultElement.textContent += " Well Played!!😊";
+      scoreText.textContent += " Well Played!!😊";
     } else {
-      resultElement.textContent += " You need more practice!!😑";
+      scoreText.textContent += " You need more practice!!😑";
     }
 
     //restart game button
@@ -221,19 +224,6 @@ const quiz = {
     restartButton.style.borderRadius = "5px";
     restartButton.style.cursor = "pointer";
     restartButton.style.marginTop = "20px";
-
-    restartButton.addEventListener("mouseenter", () => {
-      restartButton.style.backgroundColor = "blue";
-      restartButton.style.color = "white";
-      restartButton.style.transform = "scale(1.05)";
-      restartButton.style.transition = "all 0.3s ease";
-    });
-
-    restartButton.addEventListener("mouseleave", () => {
-      restartButton.style.backgroundColor = "green";
-      restartButton.style.color = "white";
-      restartButton.style.transform = "";
-    });
 
     document.getElementById("result").appendChild(restartButton);
     document.getElementById(restartButton.id).addEventListener("click", () => {
@@ -269,19 +259,6 @@ const quiz = {
     endGame.style.borderRadius = "5px";
     endGame.style.cursor = "pointer";
     endGame.style.marginTop = "20px";
-
-    endGame.addEventListener("mouseenter", () => {
-      endGame.style.backgroundColor = "blue";
-      endGame.style.color = "white";
-      endGame.style.transform = "scale(1.05)";
-      endGame.style.transition = "all 0.3s ease";
-    });
-
-    endGame.addEventListener("mouseleave", () => {
-      endGame.style.backgroundColor = "green";
-      endGame.style.color = "white";
-      endGame.style.transform = "";
-    });
 
     document.getElementById("result").appendChild(endGame);
     document.getElementById(endGame.id).addEventListener("click", () => {

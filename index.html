@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css" />
     <title>Quizz Up</title>
   </head>
@@ -11,14 +13,16 @@
         Start Game
       </button>
     </div>
+    <div class="wrapper">
     <div id="quiz-container" style="display: none">
       <div id="question-container">
         <div class="question" id="question"></div>
         <div class="options" id="options"></div>
-        <div id="feedback" style="margin-top: 10px; font-weight: bold"></div>
+        <div id="feedback" style="font-weight: bold"></div>
       </div>
       <button id="next-btn" disabled>Next</button>
       <div id="result"></div>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>

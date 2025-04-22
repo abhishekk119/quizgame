@@ -30,6 +30,8 @@ body {
 
 .start-game-button:hover {
   background-color: green;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 #quiz-container {
@@ -83,4 +85,9 @@ body {
 }
 #next-btn:disabled {
   background: #cccccc;
+}
+#next-btn:hover {
+  background-color: green;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }

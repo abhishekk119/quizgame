@@ -193,15 +193,17 @@ const quiz = {
 
     const resultElement = document.getElementById("result");
     resultElement.textContent = `You scored ${this.score} out of ${quizQuestions.length}!`;
+    resultElement.style.color = "green";
+    resultElement.style.fontSize = "32px";
 
     if (this.score > 12) {
-      resultElement.textContent += " Excellent Score!!";
+      resultElement.textContent += " Excellent Score!!😇";
     } else if (this.score > 10) {
-      resultElement.textContent += " Good Score!!";
+      resultElement.textContent += " Good Game!!😊";
     } else if (this.score > 8) {
-      resultElement.textContent += " Well Played!!";
+      resultElement.textContent += " Well Played!!😊";
     } else {
-      resultElement.textContent += " You need more practice!!";
+      resultElement.textContent += " You need more practice!!😑";
     }
 
     //restart game button
@@ -219,6 +221,19 @@ const quiz = {
     restartButton.style.borderRadius = "5px";
     restartButton.style.cursor = "pointer";
     restartButton.style.marginTop = "20px";
+
+    restartButton.addEventListener("mouseenter", () => {
+      restartButton.style.backgroundColor = "blue";
+      restartButton.style.color = "white";
+      restartButton.style.transform = "scale(1.05)";
+      restartButton.style.transition = "all 0.3s ease";
+    });
+
+    restartButton.addEventListener("mouseleave", () => {
+      restartButton.style.backgroundColor = "green";
+      restartButton.style.color = "white";
+      restartButton.style.transform = "";
+    });
 
     document.getElementById("result").appendChild(restartButton);
     document.getElementById(restartButton.id).addEventListener("click", () => {
@@ -254,6 +269,19 @@ const quiz = {
     endGame.style.borderRadius = "5px";
     endGame.style.cursor = "pointer";
     endGame.style.marginTop = "20px";
+
+    endGame.addEventListener("mouseenter", () => {
+      endGame.style.backgroundColor = "blue";
+      endGame.style.color = "white";
+      endGame.style.transform = "scale(1.05)";
+      endGame.style.transition = "all 0.3s ease";
+    });
+
+    endGame.addEventListener("mouseleave", () => {
+      endGame.style.backgroundColor = "green";
+      endGame.style.color = "white";
+      endGame.style.transform = "";
+    });
 
     document.getElementById("result").appendChild(endGame);
     document.getElementById(endGame.id).addEventListener("click", () => {
